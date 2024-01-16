@@ -1,0 +1,1309 @@
+	<!doctype html>
+	<!--[if !IE]>
+	<html class="no-js non-ie" lang="fr-FR"> <![endif]-->
+	<!--[if IE 7 ]>
+	<html class="no-js ie7" lang="fr-FR"> <![endif]-->
+	<!--[if IE 8 ]>
+	<html class="no-js ie8" lang="fr-FR"> <![endif]-->
+	<!--[if IE 9 ]>
+	<html class="no-js ie9" lang="fr-FR"> <![endif]-->
+	<!--[if gt IE 9]><!-->
+<html class="no-js" lang="fr-FR"> <!--<![endif]-->
+	<head>
+
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Configuration Basique d’Asterisk &#124; Networklab</title>
+
+		<link rel="profile" href="http://gmpg.org/xfn/11"/>
+		<link rel="pingback" href="https://www.networklab.fr/xmlrpc.php"/>
+
+		<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Networklab &raquo; Flux" href="https://www.networklab.fr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Networklab &raquo; Flux des commentaires" href="https://www.networklab.fr/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Networklab &raquo; Configuration Basique d’Asterisk Flux des commentaires" href="https://www.networklab.fr/configuration-basique-dasterisk/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.networklab.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.networklab.fr/wp-includes/css/dist/block-library/style.min.css?ver=6.4.2' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='mediaelement-css' href='https://www.networklab.fr/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.networklab.fr/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.4.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css' href='https://www.networklab.fr/wp-content/plugins/captcha/css/front_end_style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.networklab.fr/wp-includes/css/dashicons.min.css?ver=6.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css' href='https://www.networklab.fr/wp-content/plugins/captcha/css/desktop_style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css' href='https://www.networklab.fr/wp-content/themes/responsive/style.css?ver=1.9.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-media-queries-css' href='https://www.networklab.fr/wp-content/themes/responsive/core/css/style.css?ver=1.9.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://www.networklab.fr/wp-content/plugins/jetpack/css/jetpack.css?ver=12.8.1' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.networklab.fr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-content/themes/responsive/core/js/responsive-modernizr.js?ver=2.6.1" id="modernizr-js"></script>
+<link rel="https://api.w.org/" href="https://www.networklab.fr/wp-json/" /><link rel="alternate" type="application/json" href="https://www.networklab.fr/wp-json/wp/v2/posts/942" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.networklab.fr/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.2" />
+<link rel="canonical" href="https://www.networklab.fr/configuration-basique-dasterisk/" />
+<link rel='shortlink' href='https://wp.me/p4rAWC-fc' />
+<link rel="alternate" type="application/json+oembed" href="https://www.networklab.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.networklab.fr%2Fconfiguration-basique-dasterisk%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.networklab.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.networklab.fr%2Fconfiguration-basique-dasterisk%2F&#038;format=xml" />
+	<style>img#wpstats{display:none}</style>
+		<!-- We need this for debugging -->
+<!-- Responsive 1.9.3.8 -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #dddcd2; }
+</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Configuration Basique d’Asterisk" />
+<meta property="og:url" content="https://www.networklab.fr/configuration-basique-dasterisk/" />
+<meta property="og:description" content="Afin de débuter la configuration de notre serveur Asterisk, voyons quelques configurations de base. Nous allons créer des utilisateurs, puis configurer le DialPlan pour permettre aux appels de pass…" />
+<meta property="article:published_time" content="2014-02-27T10:10:06+00:00" />
+<meta property="article:modified_time" content="2017-01-08T15:53:59+00:00" />
+<meta property="og:site_name" content="Networklab" />
+<meta property="og:image" content="http://www.networklab.fr/wp-content/uploads/2014/02/31.jpg" />
+<meta property="og:image:width" content="619" />
+<meta property="og:image:height" content="242" />
+<meta property="og:image:alt" content="Fichiers Asterisk" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:text:title" content="Configuration Basique d’Asterisk" />
+<meta name="twitter:image" content="http://www.networklab.fr/wp-content/uploads/2014/02/31.jpg?w=640" />
+<meta name="twitter:image:alt" content="Fichiers Asterisk" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+	</head>
+
+<body class="post-template-default single single-post postid-942 single-format-standard custom-background">
+
+<div id="container" class="hfeed">
+
+	<div id="header">
+
+		
+		
+		
+		
+			<div id="logo">
+				<a href="https://www.networklab.fr/"><img src="https://www.networklab.fr/wp-content/uploads/2013/09/cropped-Logo3.jpg" width="960" height="275" alt="Networklab"/></a>
+			</div><!-- end of #logo -->
+
+		
+		
+				<div class="main-nav"><ul id="menu-menu-1" class="menu"><li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-16"><a href="http://www.networklab.fr/">Accueil</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-28"><a href="https://www.networklab.fr/category/ccnp_routing/">CCNP Route</a>
+<ul class="sub-menu">
+	<li id="menu-item-29" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29"><a href="https://www.networklab.fr/category/ccnp_routing/eigrp/">EIGRP</a></li>
+	<li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30"><a href="https://www.networklab.fr/category/ccnp_routing/ospf/">OSPF</a></li>
+	<li id="menu-item-424" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-424"><a href="https://www.networklab.fr/category/ccnp_routing/route-redistribution/">Redistribution De Routes</a></li>
+	<li id="menu-item-478" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478"><a href="https://www.networklab.fr/category/ccnp_routing/bgp/">BGP</a></li>
+	<li id="menu-item-569" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-569"><a href="https://www.networklab.fr/category/ccnp_routing/path_control/">Path Control</a></li>
+	<li id="menu-item-584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-584"><a href="https://www.networklab.fr/category/ccnp_routing/ipv6/">IPv6</a></li>
+</ul>
+</li>
+<li id="menu-item-621" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-621"><a href="https://www.networklab.fr/category/ccnp_switch/">CCNP Switch</a>
+<ul class="sub-menu">
+	<li id="menu-item-624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-624"><a href="https://www.networklab.fr/category/ccnp_switch/network_model/">Network Model</a></li>
+	<li id="menu-item-628" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-628"><a href="https://www.networklab.fr/category/ccnp_switch/vlan/">VLAN</a></li>
+	<li id="menu-item-736" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-736"><a href="https://www.networklab.fr/category/ccnp_switch/stp/">Spanning Tree</a></li>
+	<li id="menu-item-779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-779"><a href="https://www.networklab.fr/category/ccnp_switch/etherchannel/">Etherchannel</a></li>
+	<li id="menu-item-798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-798"><a href="https://www.networklab.fr/category/ccnp_switch/routage_inter_vlan/">Routage Inter VLAN</a></li>
+	<li id="menu-item-821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-821"><a href="https://www.networklab.fr/category/ccnp_switch/gateway_redundancy/">Gateway Redundancy</a></li>
+	<li id="menu-item-874" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-874"><a href="https://www.networklab.fr/category/ccnp_switch/securite/">Sécurité</a></li>
+	<li id="menu-item-885" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-885"><a href="https://www.networklab.fr/category/ccnp_switch/voip/">VoIP</a></li>
+	<li id="menu-item-895" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-895"><a href="https://www.networklab.fr/category/ccnp_switch/wireless/">Wireless</a></li>
+</ul>
+</li>
+<li id="menu-item-1380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1380"><a href="https://www.networklab.fr/category/ccnp_tshoot/">CCNP Tshoot</a>
+<ul class="sub-menu">
+	<li id="menu-item-1381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1381"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_introduction/">Introduction</a></li>
+	<li id="menu-item-1416" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1416"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_outils/">Trousse à Outils</a></li>
+	<li id="menu-item-1415" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1415"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_outils_ios/">Outils IOS</a></li>
+	<li id="menu-item-1465" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1465"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_commandes/">Commandes Tshoot</a></li>
+	<li id="menu-item-1505" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1505"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_l2/">Tshoot Niveau 2</a></li>
+	<li id="menu-item-1584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1584"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_l3/">Tshoot Niveau 3</a></li>
+	<li id="menu-item-1709" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1709"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_ipv6/">Tshoot IPv6</a></li>
+	<li id="menu-item-1733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1733"><a href="https://www.networklab.fr/category/ccnp_tshoot/ccnp_tshoot_general/">Tshoot Général</a></li>
+</ul>
+</li>
+<li id="menu-item-1939" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1939"><a href="https://www.networklab.fr/category/ccna_voice/">CCNA Voice</a>
+<ul class="sub-menu">
+	<li id="menu-item-1940" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1940"><a href="https://www.networklab.fr/category/ccna_voice/ccna_voice_la_telephonie/">La Téléphonie</a></li>
+	<li id="menu-item-2010" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2010"><a href="https://www.networklab.fr/category/ccna_voice/ccna_voice_cme/">Call Manager Express</a></li>
+	<li id="menu-item-2142" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2142"><a href="https://www.networklab.fr/category/ccna_voice/ccna_voice_cucm/">Cisco Unified Communications Manager</a></li>
+</ul>
+</li>
+<li id="menu-item-916" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-916"><a href="https://www.networklab.fr/category/asterisk/">Asterisk</a>
+<ul class="sub-menu">
+	<li id="menu-item-917" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-917"><a href="https://www.networklab.fr/category/asterisk/asterisk_introduction/">Introduction</a></li>
+	<li id="menu-item-960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-960"><a href="https://www.networklab.fr/category/asterisk/asterisk_installation/">Installation</a></li>
+	<li id="menu-item-959" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-959"><a href="https://www.networklab.fr/category/asterisk/asterisk_configuration_basique/">Configuration Basique</a></li>
+	<li id="menu-item-972" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-972"><a href="https://www.networklab.fr/category/asterisk/asterisk_fonctionnalites/">Fonctionnalités</a></li>
+	<li id="menu-item-1032" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1032"><a href="https://www.networklab.fr/category/asterisk/interconnexion_asterisk/">Interconnexion Asterisk</a></li>
+	<li id="menu-item-1044" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1044"><a href="https://www.networklab.fr/category/asterisk/liaison_itsp/">Liaison ITSP</a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1045"><a href="https://www.networklab.fr/category/asterisk/securite-asterisk/">Sécurité</a></li>
+	<li id="menu-item-1071" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1071"><a href="https://www.networklab.fr/category/asterisk/failover/">Failover</a></li>
+	<li id="menu-item-1091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1091"><a href="https://www.networklab.fr/category/asterisk/interface_web/">Interface WEB</a></li>
+	<li id="menu-item-1116" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1116"><a href="https://www.networklab.fr/category/asterisk/xivo/">Xivo</a></li>
+</ul>
+</li>
+<li id="menu-item-1186" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1186"><a href="https://www.networklab.fr/category/securite-2/">Sécurité</a>
+<ul class="sub-menu">
+	<li id="menu-item-1187" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1187"><a href="https://www.networklab.fr/category/securite-2/securite_introduction/">Introduction</a></li>
+	<li id="menu-item-1209" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="https://www.networklab.fr/category/securite-2/outils_pen_test/">Outils de Pen Test</a></li>
+	<li id="menu-item-1210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1210"><a href="https://www.networklab.fr/category/securite-2/securite_wifi/">Wifi</a></li>
+	<li id="menu-item-1235" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1235"><a href="https://www.networklab.fr/category/securite-2/scan_reseau/">Scan Réseau</a></li>
+	<li id="menu-item-1248" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1248"><a href="https://www.networklab.fr/category/securite-2/scan_de_vulnerabilites/">Scan de Vulnérabilités</a></li>
+	<li id="menu-item-1296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1296"><a href="https://www.networklab.fr/category/securite-2/intrusions/">Pen Test</a></li>
+</ul>
+</li>
+<li id="menu-item-1873" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1873"><a href="https://www.networklab.fr/category/memo/">Guides de Configuration</a>
+<ul class="sub-menu">
+	<li id="menu-item-1802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1802"><a href="https://www.networklab.fr/category/memo/memo_cisco/">Cisco</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1803"><a href="https://www.networklab.fr/category/memo/memo_cisco/memo_cisco_configuration_basique/">Configuration Basique</a></li>
+		<li id="menu-item-1815" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1815"><a href="https://www.networklab.fr/category/memo/memo_cisco/memo_cisco_configuration_routeur/">Routeur</a></li>
+		<li id="menu-item-1816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1816"><a href="https://www.networklab.fr/category/memo/memo_cisco/memo_cisco_configuration_switch/">Switch</a></li>
+		<li id="menu-item-2460" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2460"><a href="https://www.networklab.fr/category/memo/memo_cisco/asa_configuration/">Firewall ASA</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1889" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1889"><a href="https://www.networklab.fr/category/memo/memo_hp/">HP</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1890" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1890"><a href="https://www.networklab.fr/category/memo/memo_hp/memo_hp_h3c_switch/">Switch H3C</a></li>
+		<li id="menu-item-1891" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1891"><a href="https://www.networklab.fr/category/memo/memo_hp/memo_hp_procurve_switch/">Switch Procurve</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1935" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1935"><a href="https://www.networklab.fr/category/memo/memo_alcatel/">Alcatel</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1936" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1936"><a href="https://www.networklab.fr/category/memo/memo_alcatel/memo_alcatel_configuration_switch/">Switch</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://www.networklab.fr/a-propos/">À Propos</a></li>
+</ul></div>
+		
+		
+	</div><!-- end of #header -->
+
+	<div id="wrapper" class="clearfix">
+
+<div id="content" class="grid col-940">
+
+	<div class="breadcrumb-list" xmlns:v="http://rdf.data-vocabulary.org/#"><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://www.networklab.fr/">Accueil</a></span> <span class="chevron">&#8250;</span> <span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://www.networklab.fr/category/asterisk/">Asterisk</a></span> <span class="chevron">&#8250;</span> <span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://www.networklab.fr/category/asterisk/asterisk_configuration_basique/">Configuration Basique</a></span> <span class="chevron">&#8250;</span> <span class="breadcrumb-current">Configuration Basique d’Asterisk</span></div>
+	
+		
+						<div id="post-942" class="post-942 post type-post status-publish format-standard hentry category-asterisk_configuration_basique tag-asterisk-configuration-basique tag-asterisk-configuration-utilisateur tag-asterisk-configuration-voicemail">
+				
+				
+	<h1 class="entry-title post-title">Configuration Basique d’Asterisk</h1>
+
+<div class="post-meta">
+	<span class="meta-prep meta-prep-author posted">Post&#233; le </span><a href="https://www.networklab.fr/configuration-basique-dasterisk/" title="12 h 10 min" rel="bookmark"><span class="timestamp updated">27 février 2014</span></a><span class="byline"> par </span><span class="author vcard"><a class="url fn n" href="https://www.networklab.fr/author/vweber/" title="Afficher tous les articles par Valentin Weber">Valentin Weber</a></span>
+			<span class="comments-link">
+		<span class="mdash">&mdash;</span>
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comments">30 commentaires &darr;</a>		</span>
+	</div><!-- end of .post-meta -->
+
+				<div class="post-entry">
+					<p>Afin de débuter la configuration de notre serveur Asterisk, voyons quelques configurations de base.</p>
+<p>Nous allons créer des utilisateurs, puis configurer le DialPlan pour permettre aux appels de passer.</p>
+<p>A l’issue de cet article vous disposerez d’un système basique mais fonctionnel.</p>
+<p><span id="more-942"></span></p>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">1) L’administration d’Asterisk</span></h2>
+<p>&nbsp;</p>
+<p>Avant de nous plonger dans la configuration d’Asterisk, attardons nous sur la manière de l’administrer.</p>
+<p>&nbsp;</p>
+<p>Nous disposons de deux choses pour administrer Asterisk :</p>
+<ul>
+<li>La console</li>
+<li>Les fichiers de configuration</li>
+</ul>
+<p>&nbsp;</p>
+<p>La console permet principalement de faire du debug et de voir l’état du serveur.</p>
+<p>Nous pouvons aussi l’utiliser pour redémarrer Asterisk, charger des modules, etc…</p>
+<p>&nbsp;</p>
+<p>La console se lance avec la commande suivante :</p>
+<pre><b>asterisk –r</b></pre>
+<p>Il est possible de placer le paramètre « <strong>v</strong> » à la fin de la commande.</p>
+<p>De cette manière la console s’ouvrira en mode verbeux.</p>
+<p>&nbsp;</p>
+<p>Sans le mode verbeux, la console ne retourne aucun debug lors des actions.</p>
+<p><a href="http://www.networklab.fr/wp-content/uploads/2014/02/11.jpg"><img decoding="async" class="aligncenter size-full wp-image-945" src="http://www.networklab.fr/wp-content/uploads/2014/02/11.jpg" alt="Reload" width="170" height="35" /></a></p>
+<p>&nbsp;</p>
+<p>Avec le mode verbeux, nous obtenons des retours sur les commandes entrées.</p>
+<p><a href="http://www.networklab.fr/wp-content/uploads/2014/02/21.jpg"><img decoding="async" class="aligncenter size-full wp-image-946" src="http://www.networklab.fr/wp-content/uploads/2014/02/21.jpg" alt="Reload" width="288" height="111" /></a></p>
+<p>&nbsp;</p>
+<p>Plus nous plaçons de «<strong> v</strong> » à la fin de la commande, plus nous obtiendrons de debug.</p>
+<pre><b>asterisk -rvvv</b></pre>
+<p>&nbsp;</p>
+<p>La configuration d’Asterisk se fait dans les fichiers de configuration.</p>
+<p>&nbsp;</p>
+<p>Ces fichiers sont placés dans le répertoire suivant :</p>
+<pre><b>/etc/asterisk/</b></pre>
+<p>&nbsp;</p>
+<p>Voici certains des fichiers que l’on retrouve dans le répertoire d’Asterisk :</p>
+<p><a href="http://www.networklab.fr/wp-content/uploads/2014/02/31.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-957" src="http://www.networklab.fr/wp-content/uploads/2014/02/31.jpg" alt="Fichiers Asterisk" width="619" height="242" srcset="https://www.networklab.fr/wp-content/uploads/2014/02/31.jpg 619w, https://www.networklab.fr/wp-content/uploads/2014/02/31-300x117.jpg 300w" sizes="(max-width: 619px) 100vw, 619px" /></a></p>
+<p>Pour que les modifications des fichiers soient prises en compte, il faut relancer Asterisk. Ou au moins le module concerné.</p>
+<pre><b>asterisk –rv
+reload</b></pre>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">2) Création d’utilisateur</span></h2>
+<p>&nbsp;</p>
+<p>La configuration des utilisateurs est à faire dans le fichier <b>users.conf</b> (dans <b>/etc/asterisk/</b>)</p>
+<p>&nbsp;</p>
+<p>Avant d’éditer les fichiers pour la première fois, vous pouvez les vider comme ceci :</p>
+<pre><b>echo "" &gt; users.conf</b></pre>
+<p>&nbsp;</p>
+<p>Chaque utilisateur sera défini dans ce fichier. Nous y retrouverons les paramètres des utilisateurs.</p>
+<p>Afin de simplifier la création d’utilisateur, nous pouvons placer les paramètres communs dans un Template.</p>
+<p>Les utilisateurs feront alors référence au Template.</p>
+<p>De cette manière, il sera très simple d’ajouter de nouveaux users.</p>
+<p>&nbsp;</p>
+<p>Commençons donc par créer le Template.</p>
+<p>Voici un exemple :</p>
+<pre><b>[default_template](!)              ; Nom du template . Le « ! » indique qu’il s’agit d’un Template
+type=friend                        ; Type d'objet SIP (friend = utilisateur)
+host=dynamic                       ; L’utilisateur n’est pas associé à une IP fixe
+dtmfmode=rfc2833                   ; Mode DTMF
+disallow=all                       ; Interdit tous les codecs
+allow=ulaw                         ; Autorise le codec ulaw
+nat=never          </b><b>                </b><b>; L'utilisateur ne se trouve pas derrière un NAT
+hassip=yes                         ; L’utilisateur possède un compte SIP
+hasiax=no                          ; L’utilisateur </b><b>ne </b><b>possède</b><b> pas de</b><b> compte </b><b>iax
+callwaiting = yes                  ; L’utilisateur peut mettre des appels en attente
+transfer=yes                       ; L’utilisateur peut transférer des appels
+canpark=yes                        ; L’utilisateur peut mettre des appels dans le parking
+hasvoicemail=yes                   ; L’utilisateur possède une boîte vocale 
+deny=0.0.0.0/0.0.0.0               ; Range d’IP non-autorisées pour le client
+permit=192.168.1.0/255.255.255.0   ; Range d’IP autorisées pour le client
+qualify=yes                        ; Permet le monitoring</b></pre>
+<p>Certains des paramètres ont pour valeur par défaut la valeur indiquée ici.</p>
+<p>Le type d’objet SIP peut prendre 3 valeurs :</p>
+<ul>
+<li><b>Peer</b></li>
+<li><b>User</b></li>
+<li><b>Friend</b></li>
+</ul>
+<p>Le <strong>Peer</strong> est un objet auquel nous pouvons envoyer des appels (exemple : le Trunk vers l’ITSP).</p>
+<p>L’<strong>User</strong> est un objet qui ne peut qu’appeler.</p>
+<p>Le <strong>Friend</strong> est à la fois Peer et User. Il peut envoyer et recevoir des appels (exemple : un utilisateur)</p>
+<p>&nbsp;</p>
+<p>Nous pouvons ensuite créer des utilisateurs :</p>
+<pre><b>[100](default_template)        ; Numéro SIP et Template utilisé
+fullname = Marc Aubert         ; Nom complet de l'utilisateur us
+username = maubert             ; Nom d'utilisateur
+secret=password                ; Mot de passe
+mailbox = 100                  ; N° de boîte vocale
+context=</b><b>d</b><b>ept_1                 ; Contexte de l’utilisateur
+
+[101](default_template)        ; Numéro SIP et Template utilisé
+fullname = Alain Aldric        ; Nom complet de l'utilisateur
+username = aaldric             ; Nom d'utilisateur
+secret=password                ; Mot de passe
+mailbox = 101                  ; N° de boîte vocale
+context=</b><b>d</b><b>ept_1                 ; Contexte de l’utilisateur
+
+[200](default_template)        ; Numéro SIP et Template utilisé
+fullname = Leon Morgan         ; Nom complet de l'utilisateur
+username = lmorgan             ; Nom d'utilisateur
+secret=password                ; Mot de passe
+mailbox = 200                  ; N° de boîte vocale
+context=</b><b>d</b><b>ept_2                 ; Contexte de l’utilisateur
+
+</b></pre>
+<p>Votre fichier d’utilisateurs sera amené à recevoir de nombreux users.</p>
+<p>Pensez donc à l’agencer de manière claire.</p>
+<p>Par exemple :</p>
+<p><a href="http://www.networklab.fr/wp-content/uploads/2014/02/41.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-948" src="http://www.networklab.fr/wp-content/uploads/2014/02/41.jpg" alt="users.conf" width="386" height="406" srcset="https://www.networklab.fr/wp-content/uploads/2014/02/41.jpg 386w, https://www.networklab.fr/wp-content/uploads/2014/02/41-285x300.jpg 285w" sizes="(max-width: 386px) 100vw, 386px" /></a></p>
+<p>Pensez à relancer Asterisk pour qu’il prenne en compte les modifications.</p>
+<pre><b>asterisk –rvv
+reload</b></pre>
+<p>&nbsp;</p>
+<p>Veillez à ce qu’il ne retourne pas d’erreur.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">3) Configuration des Voicemails</span></h2>
+<p>&nbsp;</p>
+<p>Les Voicemails permettent de laisser des messages aux utilisateurs lors-ce-que ceux-ci ne sont pas disponibles.</p>
+<p>Il s’agit donc de leur messagerie vocale.</p>
+<p>&nbsp;</p>
+<p>Pour se connecter à leur messagerie, les utilisateurs devront composer un certain numéro, puis entrer un mot de passe.</p>
+<p>Voyons comment configurer le fichier <b>voicemail.conf</b>.</p>
+<p>&nbsp;</p>
+<p>Le fichier à éditer est le suivant :</p>
+<pre><b>/etc/asterisk/voicemail.conf</b></pre>
+<p>&nbsp;</p>
+<p>Je vous invite à jeter un œil à son contenu avant de le vider.</p>
+<pre><b>echo "" &gt; voicemail.conf</b></pre>
+<p>&nbsp;</p>
+<p>Au début du fichier, une section générale définira les paramètres généraux des Voicemails.</p>
+<p>&nbsp;</p>
+<p>En voici un example :</p>
+<pre><b>[general]
+maxmsg=100          ; Nombre max de message sur la Voicemail. Si elle est pleine, il n'est pas possible de rajouter des messages
+maxsecs=0           ; Durée max d'un message. "0" = pas de limite
+minsecs=2           ; Durée minimum d'un message
+maxlogins=3         ; Nombre max d'erreur de login
+review=no           ; Permet à l'appelant de réécouter son message avant de le transmettre à la Voicmail. Accessible en terminant le message par #
+saycid=no           ; Dicte le numéro de l'appelant avant de jouer le message qu'il a laissé</b></pre>
+<p>&nbsp;</p>
+<p>La plupart de ces paramètres sont ici à leur valeur par défaut (hormis <b>minsecs</b>)</p>
+<p>&nbsp;</p>
+<p>Dans la suite du fichier, nous définirons les utilisateurs.</p>
+<pre><b>[dept_1_vm]
+100 =&gt; 1234, Marc Aubert
+101 =&gt; 1234, Alain Aldric
+
+[dept_2_vm]
+200 =&gt; 1234, Leon Morgan</b></pre>
+<p>&nbsp;</p>
+<p>Ici, “1234” correspond au mot de passe de la Voicemail de l’utilisateur.</p>
+<p>&nbsp;</p>
+<p>Il est possible de désactiver l’utilisation du mot de passe, en ne spécifiant rien avant la virgule.</p>
+<pre><b>200 =&gt; , Leon Morgan</b></pre>
+<p>&nbsp;</p>
+<p>Les trois utilisateurs précédemment créés ont à présent chacun une boite vocale.</p>
+<p>En appelant leur messagerie, il leurs sera possible de consulter leurs messages, mais aussi de personnaliser leur message d’accueil.</p>
+<p>&nbsp;</p>
+<p>Asterisk propose aussi d’envoyer un mail à l’utilisateur lors-ce-que celui a reçu un message sur sa Voicemail. De plus, le message audio sera inclus en pièce-jointe du mail.</p>
+<p>Cette option nécessite une configuration plus poussée. Il faudra aussi qu’Asterisk puisse envoyer des mails.</p>
+<p>&nbsp;</p>
+<p>N’oubliez pas de relancer Asterisk pour prendre en compte les modifications.</p>
+<pre><b>asterisk –rv
+reload</b></pre>
+<p>&nbsp;</p>
+<p>Ou au moins la configuration des Voicemails.</p>
+<pre><b>asterisk –rv
+voicemail reload</b></pre>
+<h2></h2>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">4) Le DialPlan</span></h2>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">But du DialPlan</span></h3>
+<p>Passons à présent au cœur d’Asterisk : le DialPlan.</p>
+<p>&nbsp;</p>
+<p>Le DialPlan est ce qui va définir le routage des appels à travers le serveur.</p>
+<p>&nbsp;</p>
+<p>La configuration du DialPlan est contenue dans le fichier suivant :</p>
+<pre><b>/etc/asterisk/extensions.conf</b></pre>
+<p>&nbsp;</p>
+<p>Dans ce fichier, nous devrons définir le comportement d’Asterisk vis-à-vis des appels.</p>
+<p>&nbsp;</p>
+<p>Par exemple, que ce passe-t-il lors-ce-que Asterisk reçoit un appel à destination du numéro 100 ?</p>
+<p>Nous allons définir une règle qui dit qu’il faut faire sonner le téléphone de l’utilisateur 100, et ce pendant X secondes, avant de renvoyer l’appelant sur la messagerie de l’utilisateur 100.</p>
+<p>&nbsp;</p>
+<p>De même, pour permettre à un utilisateur de consulter sa messagerie, nous définirons un numéro associés à la messagerie du groupe d’utilisateur.</p>
+<p>Par exemple, pour les utilisateurs 100 à 190, s’ils composent le numéro 199, ils tomberont sur leur messagerie.</p>
+<p>Etc…</p>
+<p>&nbsp;</p>
+<p>Voici un aperçu de ce que cela pourrait donner dans le fichier <b>extensions.conf</b> :</p>
+<pre><b>exten =&gt; _1[0-8]X,1,Dial(SIP/${EXTEN},30)
+exten =&gt; _1[0-8]X,2,Voicemail(${EXTEN}@</b><b>dept_1</b><b>_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Sans rentrer dans les détails pour le moment, cela signifie que si quelqu’un appelle un numéro entre 100 et 189, le téléphone associé à ce numéro sonnera pendant 30 secondes. Sans réponse, l’appelant tombera sur la Voicemail de l’utilisateur qu’il cherchait à joindre.</p>
+<p>&nbsp;</p>
+<p>Pour ce qui est de consulter la messagerie :</p>
+<pre><b>exten =&gt; 199,1,Answer()
+exten =&gt; 199,2,VoiceMailMain(${CALLERID(num)}@d</b><b>ept_1</b><b>_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Quand un utilisateur appel le numéro 199, il sera redirigé vers sa propre messagerie. A condition qu’il ait une messagerie définie dans dept_1_vm.</p>
+<p>&nbsp;</p>
+<p>Étudions plus en détail le fonctionnement du fichier <b>extensions.conf</b>.</p>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les contextes</span></h3>
+<p>Tout d’abord, le DialPlan est agencé sous forme de contexte.</p>
+<p>Chaque utilisateur appartient à un contexte, d’après le fichier <b>User.conf</b>.</p>
+<p>&nbsp;</p>
+<p>Quand un utilisateur lance un appel, Asterisk va chercher, dans le contexte associé à l’utilisateur, les actions à effectuer.</p>
+<p>&nbsp;</p>
+<p>Les contextes sont définis entre crochet.</p>
+<p>&nbsp;</p>
+<p>Voici un exemple :</p>
+<pre><b>[d</b><b>ept_1</b><b>]
+exten =&gt; _1[0-8]X,1,Dial(SIP/${EXTEN},30)
+exten =&gt; _1[0-8]X,2,Voicemail(${EXTEN}@</b><b>dept_1</b><b>_vm)
+
+[d</b><b>ept_2</b><b>]
+exten =&gt; _2[0-8]X,1,Dial(SIP/${EXTEN},30)
+exten =&gt; _2[0-8]X,2,Voicemail(${EXTEN}@</b><b>dept_2</b><b>_vm)</b></pre>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les Extensions</span></h3>
+<p>Les entrées dans le fichier <strong>extension.conf</strong> sont appelées des extensions.</p>
+<p>Elles se composent comme ceci :</p>
+<pre><b>exten =&gt; Numéro,Priorité,</b> A<b>pplications</b> <b>()</b></pre>
+<p>Le mot clé « Exten =&gt; » marque le début d’une extension.</p>
+<p>Le numéro correspond au numéro de téléphone pris en compte par l’extension.</p>
+<p>&nbsp;</p>
+<p>La priorité définie l’ordre des actions de l’extension.</p>
+<p>En effet, nous spécifierons toujours plusieurs actions dans une extension (voir exemple précédent).</p>
+<p>&nbsp;</p>
+<p>L’application définit ce que le serveur va faire.</p>
+<p>&nbsp;</p>
+<p>Voyons les possibilités qui s’offrent à nous pour la rédaction d’une extension.</p>
+<p>&nbsp;</p>
+<p>Commençons par le numéro.</p>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les numéros</span></h3>
+<p>Comme nous l’avons vu, nous pouvons spécifier un numéro bien précis.</p>
+<pre><b>exten =&gt; 199,1,Answer()</b></pre>
+<p>&nbsp;</p>
+<p>Ou bien, nous pouvons spécifier un pattern.</p>
+<p>Le but ici est de prendre en compte plusieurs numéros.</p>
+<p>&nbsp;</p>
+<p>Tout d’abord, un pattern doit commencer par un «<strong> _</strong> ».</p>
+<p>Ensuite, nous pouvons utiliser les caractères suivants :</p>
+<ul>
+<li>« <b>X</b> » : correspond aux chiffres de 0 à 9</li>
+<li>« <b>Z</b> » : correspond aux nombres de 1 à 9</li>
+<li>« N » : correspond aux nombres de 2 à 9</li>
+<li>« <b>.</b> » : correspond à un ou plusieurs chiffres</li>
+<li>« <b>!</b> » : correspond à zéro ou plusieurs chiffres</li>
+</ul>
+<p>&nbsp;</p>
+<p>Nous pouvons aussi utiliser les crochets.</p>
+<p>[1-5] correspond aux nombre de 1 à 5.</p>
+<p>[123] correspond aux nombres 1, 2 ou 3.</p>
+<p>&nbsp;</p>
+<p>Voici à présent quelques exemples :</p>
+<pre><b>exten =&gt; _[123].[7-9],1,Answer()</b></pre>
+<p>Cette extension englobe tous les numéros commençant par 1, 2 ou 3, et qui finissent par 7, 8 ou 9.</p>
+<p>&nbsp;</p>
+<pre><b>exten =&gt; _0XXXXXXXXX,1,</b><b> Answer()</b></pre>
+<p>Cette extension correspond à tous les numéros à 10 chiffres, qui commencent par 0.</p>
+<p>&nbsp;</p>
+<pre><b>exten =&gt; </b><b>_1[0-8]X</b><b>,1,Answer()</b></pre>
+<p>Cette extension englobe tous les numéros de 100 à 189. Ainsi nous pouvons garder les 10 derniers numéros comme numéros spéciaux (Voicemail, Conférence, etc…).</p>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les applications</span></h3>
+<p>Les applications définissent ce que doit faire le serveur.</p>
+<p>Par exemple, <b>Answer() </b>signifie que le serveur doit décrocher l’appel.</p>
+<p>Ces applications peuvent prendre un ou plusieurs paramètres.</p>
+<p>&nbsp;</p>
+<p>Voici une liste de quelques applications possibles :</p>
+<ul>
+<li><b>Answer()</b> : permet de décrocher l’appel</li>
+<li><b>HangUp()</b> : permet de raccrocher l’appel</li>
+<li><b>Dial(type/identifier,timeout)</b> : permet de composer un numéro, avec un timeout en cas de non-réponse</li>
+<li><b>VoiceMail(user@context) </b>: permet de joindre la messagerie de l’utilisateur spécifié</li>
+<li><b>VoiceMailMain(user@context)</b> : permet de consulter la messagerie de l’utilisateur spécifié</li>
+<li><b>Playback(sound-file)</b> : permet de jouer un son</li>
+<li><b>SetMusicOnHold(class)</b> : permet de jouer une musique d’attente</li>
+<li><b>Goto(contexte,extension,priorité)</b>: permet de se rendre à un contexte précis, à une certaine extension, à une certaine priorité</li>
+</ul>
+<p>&nbsp;</p>
+<p>Il existe encore bien d’autres applications.</p>
+<p>&nbsp;</p>
+<p>En paramètre de ces applications, nous pouvons utiliser des variables.</p>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les variables</span></h3>
+<p>Voici quelques variables qui peuvent être utilisés dans le DialPlan :</p>
+<ul>
+<li><b>${EXTEN}</b> : Renvoie l’extension actuellement appelée</li>
+<li><b>${CONTEXT}</b> : Renvoie le contexte actuel</li>
+<li><b>${CALLERID(name)}</b> : Renvoie le nom de la personne qui appel</li>
+<li><b>${CALLERID(num)}</b> : Renvoie le numéro de la personne qui appel</li>
+<li><b>${DATETIME}</b> : Renvoie la date actuelle au format DDMMYYYY-HH:MM:SS</li>
+<li><b>${PRIORITY} </b>: Renvoie la priorité actuelle de l’extension</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>De même que pour les applications, il existe de très nombreuses variables.</p>
+<p>&nbsp;</p>
+<p>A présent, vous êtes en mesure de comprendre l’intégralité des exemples précédents.</p>
+<pre><b>exten =&gt; _1[0-8]X,1,Dial(SIP/${EXTEN},30)
+exten =&gt; _1[0-8]X,2,Voicemail(${EXTEN}@</b><b>dept_1</b><b>_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Le « <b>${EXTEN} »</b> de la <b> </b>priorité 1 fait référence au numéro composé par l’appelant, ce qui permet de joindre le numéro qui a été composé.</p>
+<p>Le « <b>${EXTEN} »</b> de la <b> </b>priorité 2 permet de joindre la Voicemail.</p>
+<p>&nbsp;</p>
+<pre><b>exten =&gt; 199,1,Answer()
+exten =&gt; 199,2,VoiceMailMain(${CALLERID(num)}@d</b><b>ept_1</b><b>_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Ici, le <b>${CALLERID(num)}</b> fait référence au numéro de l’appelant, et lui permet de joindre sa Voicemail.</p>
+<p>&nbsp;</p>
+<h3><span style="color: #999999;">Les extensions spéciales</span></h3>
+<p>Il existe aussi certaines extensions spéciales.</p>
+<p>&nbsp;</p>
+<p>Voyons certaines de ces extensions.</p>
+<p>&nbsp;</p>
+<p><b>L’extension « I »</b></p>
+<p>Correspond à l’extension qui est appelée quand l’appelant compose une extension qui n’existe pas dans le contexte ou dans l’IVR (standard auto avec choix au clavier).</p>
+<p><b>L’extension « t »</b></p>
+<p>Correspond à l’extension qui est appelée lors d’un timeout. Par exemple, si l’utilisateur ne choisit pas d’option dans un IVR.</p>
+<p><b>L’extension « h »</b></p>
+<p>Correspond à l’extension qui est appelée lors-ce-que l’utilisateur raccroche.</p>
+<p><b>L’extension « s »</b></p>
+<p>Correspond à l’extension qui est appelée lors-ce-que le serveur n’a pas d’information sur le numéro appelé (cas typique d’un appel sur une ligne analogique).</p>
+<p>&nbsp;</p>
+<p>Par exemple, dans le contexte d’un IVR, si l’utilisateur ne fait pas de choix, nous pouvons raccrocher.</p>
+<pre><b>exten =&gt; t,1,Hangup() </b></pre>
+<p>&nbsp;</p>
+<p>Ou encore, en cas de choix invalide, nous pouvons jouer un son.</p>
+<pre><b>exten =&gt; i,1,Playback(invalid)</b></pre>
+<p>&nbsp;</p>
+<p>Nous aurons l’occasion de voir des exemples dans de prochaines configurations (IVR, Trunk SIP, etc…)</p>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">5) Configuration du DialPlan</span></h2>
+<p>&nbsp;</p>
+<p>A présent que nous avons étudié la structure du DialPlan, configurons celui de notre serveur, afin d’obtenir un comportement basique.</p>
+<p>De plus, ce sera l’occasion de voir des exemples sur les notions abordées précédemment.</p>
+<p>&nbsp;</p>
+<p>Tout d’abord, il nous faut permettre aux utilisateurs d’un même contexte de s’appeler entre eux.</p>
+<p>&nbsp;</p>
+<p>En effet, même les actions basiques comme celle-ci sont à configurer dans le DialPlan.</p>
+<p>&nbsp;</p>
+<p>La configuration à mettre en place a déjà été présentée précédemment.</p>
+<p>&nbsp;</p>
+<p>Avant de configurer quoi que ce soit, il faut vider le fichier <b>extensions.conf</b>.</p>
+<p>Au passage, n’hésitez pas à jeter un œil à la configuration d’exemple avant de la supprimer.</p>
+<pre><b>echo "" &gt; extensions.conf</b></pre>
+<p>&nbsp;</p>
+<p>Commençons donc par autoriser les appels internes au contexte <strong>dept_1</strong> et <strong>dept_2</strong>, et permettons la consultation de la messagerie.</p>
+<p>&nbsp;</p>
+<p>Voici la configuration à placer dans le fichier :</p>
+<pre><b>[dept_1]
+exten =&gt; _1[0-8]X,1,Dial(SIP/${EXTEN},40)
+exten =&gt; _1[0-8]X,2,Voicemail(${EXTEN}@dept_1_vm)
+
+exten =&gt; 199,1,Answer()
+exten =&gt; 199,2,VoiceMailMain(${CALLERID(num)}@dept_1_vm)
+
+[dept_2]
+exten =&gt; _2[0-8]X,1,Dial(SIP/${EXTEN},40)
+exten =&gt; _2[0-8]X,2,Voicemail(${EXTEN}@dept_2_vm)
+
+exten =&gt; 299,1,Answer()
+exten =&gt; 299,2,VoiceMailMain(${CALLERID(num)}@dept_2_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Nous avons volontairement gardé la plage 190 à 199 libre (de même pour le range 200).</p>
+<p>De cette manière, nous pouvons utiliser les numéros 190 à 199 comme numéros spéciaux (Voicemail, IVR, etc…).</p>
+<p>&nbsp;</p>
+<p>Sauvegarder le fichier et relancer Asterisk.</p>
+<pre><b>asterisk –rvv
+reload</b></pre>
+<p>&nbsp;</p>
+<p>A présent, les utilisateurs d’un même contexte peuvent se joindre.</p>
+<p>&nbsp;</p>
+<p>Pour réaliser les tests, j’utilise le logiciel Blink, sous Windows.</p>
+<p><a href="http://www.networklab.fr/wp-content/uploads/2014/02/51.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-949" src="http://www.networklab.fr/wp-content/uploads/2014/02/51.jpg" alt="Blink test d'appel" width="301" height="583" /></a></p>
+<p>Ici, l’utilisateur 101 parvient à joindre l’utilisateur 100.</p>
+<p>&nbsp;</p>
+<p>De même, l’utilisateur 101 peut consulter sa messagerie avec le numéro 199.</p>
+<p>Une fois sur la messagerie, il lui est demandé d’entrer un mot de passe (à partir du clavier).</p>
+<p>Si l’authentification est bonne, l’utilisateur a accès à ses messages ainsi qu’aux options de configuration.</p>
+<p>&nbsp;</p>
+<p>Vous constaterez que tous les utilisateurs du même contexte utilisent le même numéro pour consulter leur messagerie.</p>
+<p>&nbsp;</p>
+<p>A présent, il nous faut autoriser les utilisateurs de contexte différents à s’appeler.</p>
+<p>Voici la configuration à mettre place (ajouter les extensions dans le contexte indiqué) :</p>
+<pre><b>[dept_1]
+exten =&gt; _2XX,1,Goto(dept_2,${EXTEN},1)
+
+[dept_2]
+exten =&gt; _1XX,1,Goto(dept_1,${EXTEN},1)</b></pre>
+<p>&nbsp;</p>
+<p>A présent, les utilisateurs peuvent se joindre entre les contextes.</p>
+<p>Voici le scénario :</p>
+<p>Si un utilisateur appel le numéro 100, et qu’il n’y a pas de réponse au bout de 30 secondes, l’appel est redirigé vers le 101. Si ce dernier ne répond pas non plus, l’appelant tombe sur la boite vocale du 100.</p>
+<p>&nbsp;</p>
+<p>Voici la configuration à mettre en place dans <b>extensions.conf</b> :</p>
+<pre><b>[dept_1]
+exten =&gt; 100,1,Dial(SIP/100,30)
+exten =&gt; 100,2,Dial(SIP/101,30)
+exten =&gt; 100,3,Voicemail(${EXTEN}@dept_1_vm)</b></pre>
+<p>&nbsp;</p>
+<p>Le scenario est effectivement respecté.</p>
+<p>Pour faciliter les tests, vous pouvez réduire les Timeouts à 5s.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #99ccff;">6) Conclusion</span></h2>
+<p>&nbsp;</p>
+<p>Nous voici arrivés au terme de cette première configuration d’Asterisk.</p>
+<p>Nous avons eu l’occasion de voir la création des utilisateurs, des Voicemails et la configuration du DialPlan.</p>
+<p>Nous avons à présent un système de VoIP basique mais fonctionnel.</p>
+<p>Nous verrons des configurations plus poussées par la suite (IVR, musique d’attente, conférence, parking, etc…).</p>
+<p>&nbsp;</p>
+
+					
+									</div>
+				<!-- end of .post-entry -->
+
+				<div class="navigation">
+					<div class="previous">&#8249; <a href="https://www.networklab.fr/installation-dasterisk/" rel="prev">Installation d’Asterisk</a></div>
+					<div class="next"><a href="https://www.networklab.fr/ring-group/" rel="next">Asterisk &#8211; Ring Group</a> &#8250;</div>
+				</div>
+				<!-- end of .navigation -->
+
+				
+
+	<div class="post-data">
+		Tagu&#233;s avec&nbsp;: <a href="https://www.networklab.fr/tag/asterisk-configuration-basique/" rel="tag">Asterisk configuration basique</a>, <a href="https://www.networklab.fr/tag/asterisk-configuration-utilisateur/" rel="tag">Asterisk configuration utilisateur</a>, <a href="https://www.networklab.fr/tag/asterisk-configuration-voicemail/" rel="tag">Asterisk configuration Voicemail</a><br />		Publi&#233; dans <a href="https://www.networklab.fr/category/asterisk/asterisk_configuration_basique/">Configuration Basique</a>	</div><!-- end of .post-data -->
+
+
+<div class="post-edit"></div>
+							</div><!-- end of #post-942 -->
+			
+						
+	<h6 id="comments">
+		30 commentaires pour “<span>Configuration Basique d’Asterisk</span>”	</h6>
+
+	
+	<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="comment-48191">
+				<div id="div-comment-48191" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/6de6684c7eef2743ae479dd80e18ef64?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6de6684c7eef2743ae479dd80e18ef64?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">NIANG</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-48191">16 mars 2015 à 11 h 48 min</a>		</div>
+
+		<p>très bon article et intéressant.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=48191#respond' data-commentid="48191" data-postid="942" data-belowelement="div-comment-48191" data-respondelement="respond" data-replyto="Répondre à NIANG" aria-label='Répondre à NIANG'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-48682">
+				<div id="div-comment-48682" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/07844bf030f67ef0994415abd4c5f000?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/07844bf030f67ef0994415abd4c5f000?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">nounou</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-48682">20 mai 2015 à 19 h 16 min</a>		</div>
+
+		<p>Mes appel passent mais je n&rsquo;arrive pas à envoyer de message ni à laisser une note vocal. Merci de me répondre c&rsquo;est urgent.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=48682#respond' data-commentid="48682" data-postid="942" data-belowelement="div-comment-48682" data-respondelement="respond" data-replyto="Répondre à nounou" aria-label='Répondre à nounou'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-2" id="comment-48683">
+				<div id="div-comment-48683" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-48683">21 mai 2015 à 9 h 39 min</a>		</div>
+
+		<p>Bonjour,</p>
+<p>Avez-vous configuré le fichier voicemail.conf comme indiqué dans la partie 3 de cet article ?<br />
+Aussi, dans le DialPlan, il faut choisir au bout de combien de temps les appels sont redirigés vers la boite vocale.<br />
+Ici « exten =&gt; _1[0-8]X,1,Dial(SIP/${EXTEN},40) » le nombre 40 signifie 40 secondes. Donc en appelant le numéro 101, il faudra attendre 40 secondes avant de tomber sur la boite vocale. Pour simplifier vos tests, je vous recommande de mettre 5 secondes.</p>
+<p>Sinon, vous pouvez ouvrir la console Asterisk (asterisk –rvv) et voir les logs qui s&rsquo;affichent pendant que vous lancez un appel.<br />
+N&rsquo;oubliez pas non plus de relancer Asterisk après avoir fait des modification.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=48683#respond' data-commentid="48683" data-postid="942" data-belowelement="div-comment-48683" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-48977">
+				<div id="div-comment-48977" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/dcc3c2a5237b6b2ce771c0a35b5a5f33?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/dcc3c2a5237b6b2ce771c0a35b5a5f33?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">alvinsteph</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-48977">27 juillet 2015 à 9 h 29 min</a>		</div>
+
+		<p>Merci votre article est tres tres explicite j&rsquo;ai compris de nombreux aspect grace a vous!!!! je me demandais qi on pouvais envoyer des message grace a asterisk.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=48977#respond' data-commentid="48977" data-postid="942" data-belowelement="div-comment-48977" data-respondelement="respond" data-replyto="Répondre à alvinsteph" aria-label='Répondre à alvinsteph'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-2 parent" id="comment-49032">
+				<div id="div-comment-49032" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49032">3 août 2015 à 9 h 48 min</a>		</div>
+
+		<p>Bonjour,<br />
+Oui, il est possible d&rsquo;envoyer des messages instantanés avec Asterisk</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49032#respond' data-commentid="49032" data-postid="942" data-belowelement="div-comment-49032" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment odd alt depth-3 parent" id="comment-49591">
+				<div id="div-comment-49591" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/f5c72fa00d8ad39ecae8802d91c042fc?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f5c72fa00d8ad39ecae8802d91c042fc?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Ibrahim mamane</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49591">26 décembre 2016 à 15 h 37 min</a>		</div>
+
+		<p>Mr Valentin Weber merci de bien me guidé en me proposant un tuto ou une procedure pour la mise en place de la messagerie instantané sur asterisk.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49591#respond' data-commentid="49591" data-postid="942" data-belowelement="div-comment-49591" data-respondelement="respond" data-replyto="Répondre à Ibrahim mamane" aria-label='Répondre à Ibrahim mamane'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-4" id="comment-49593">
+				<div id="div-comment-49593" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49593">2 janvier 2017 à 16 h 59 min</a>		</div>
+
+		<p>Bonjour,<br />
+Je ne connais pas de guide pour la mise en place de la messagerie instantanée. Je vous laisse chercher par vous même sur internet.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49593#respond' data-commentid="49593" data-postid="942" data-belowelement="div-comment-49593" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt depth-4 parent" id="comment-49776">
+				<div id="div-comment-49776" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/81b7e23fd1a18097c742f76ece134216?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/81b7e23fd1a18097c742f76ece134216?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Sylvestre</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49776">28 janvier 2018 à 23 h 34 min</a>		</div>
+
+		<p>Je suis nouveau dans la téléphonie. Je possède une instance EC2 linux 16.0.43 Lts ou j’ai installé asterisk. J’ai procédé à toutes configurations détaillées au dessus, mais je ne reçois aucun audio de mon serveur quand j’essaie de me connecter.<br />
+<a href="https://wiki.asterisk.org/wiki/display/AST/SIP+Retransmissions" rel="nofollow ugc">https://wiki.asterisk.org/wiki/display/AST/SIP+Retransmissions</a><br />
+Asterisk me renvoie à cette page pour le résoudre. Rien ne marche. Un peu d’aide svp.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49776#respond' data-commentid="49776" data-postid="942" data-belowelement="div-comment-49776" data-respondelement="respond" data-replyto="Répondre à Sylvestre" aria-label='Répondre à Sylvestre'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-5" id="comment-49780">
+				<div id="div-comment-49780" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49780">5 février 2018 à 23 h 54 min</a>		</div>
+
+		<p>Bonjour,<br />
+Le problème est un peu vague. Pouvez-vous détailler ?<br />
+Aussi, est-ce que la consolle d&rsquo;Asterisk retourne des logs (en la lançant avec la commande asterisk -rvvv) ?</p>
+
+		
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-49474">
+				<div id="div-comment-49474" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e87889da3afb6bf6513e91e0de543030?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e87889da3afb6bf6513e91e0de543030?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">amine</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49474">14 mars 2016 à 9 h 38 min</a>		</div>
+
+		<p>Bonjour,<br />
+je fais tous les étapes comme le tutorial mais la premiere appel n’est pas réalisé j’ai réçu dans mon softphone ce message la : Initiating Call.<br />
+et dans la CLI asterisk j’ais eu ce message là :</p>
+<p>chan_sip.c:25697 handle_request-invite: Call from « (82.5.145.85:5071) to extensions ‘335553366433’ rejected because extension not found in context ‘default’</p>
+<p>Qui peut m’aider c’est trop urgent je fais mon pfe sur asterisk et je suis tombé dans ce probleme. ????</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49474#respond' data-commentid="49474" data-postid="942" data-belowelement="div-comment-49474" data-respondelement="respond" data-replyto="Répondre à amine" aria-label='Répondre à amine'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-2" id="comment-49475">
+				<div id="div-comment-49475" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49475">15 mars 2016 à 21 h 47 min</a>		</div>
+
+		<p>Bonjour,</p>
+<p>Avez-vous bien une extension ou un pattern qui match le numéro que vous souhaitez joindre ? Je vois qu&rsquo;il s&rsquo;agit d&rsquo;un numéro public. Avez-vous un Trunk SIP vers un opérateur, ou bien cela pointe vers un poste interne ?<br />
+Pensez à relancer Asterisk depuis la console à chaque modification.</p>
+<p>Si rien n&rsquo;y fait, postez une copie de vos fichiers de configurations.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49475#respond' data-commentid="49475" data-postid="942" data-belowelement="div-comment-49475" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-49493">
+				<div id="div-comment-49493" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/3c8a3deffd30b1e18f36c7a6dfab10ff?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3c8a3deffd30b1e18f36c7a6dfab10ff?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">roscelin</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49493">29 avril 2016 à 18 h 58 min</a>		</div>
+
+		<p>Salut a tous, sil vous je suis nouveau dans le monde de la telephonie sur IP et plus precicement avec les solution open source et en particulier Asterisk, jai lu le tuto mais je ne parviens pas a creer les template  avec la commande  «  » » » » » »[default_template](!) » » » » »      dans le mode /etc/asterisk/users.conf  </p>
+<p>voici le message de retour *** -bash: /etc/asterisk/user.conf: No such file or directory ***</p>
+<p>sil vous plait jai besoin de votre et pardon le plus rapidement possible merci a vous d avance !!!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49493#respond' data-commentid="49493" data-postid="942" data-belowelement="div-comment-49493" data-respondelement="respond" data-replyto="Répondre à roscelin" aria-label='Répondre à roscelin'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor even depth-2" id="comment-49496">
+				<div id="div-comment-49496" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49496">9 mai 2016 à 21 h 29 min</a>		</div>
+
+		<p>Bonjour,<br />
+Êtes-vous bien en mode d&rsquo;édition du fichier users.conf ?<br />
+Si oui, quel est son contenu actuel ?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49496#respond' data-commentid="49496" data-postid="942" data-belowelement="div-comment-49496" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-49514">
+				<div id="div-comment-49514" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/60f157aa6c5e0d104f3a2cd808e22aea?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/60f157aa6c5e0d104f3a2cd808e22aea?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">james</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49514">16 juin 2016 à 23 h 16 min</a>		</div>
+
+		<p>grace à cet article mon TFC aura sa forme</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49514#respond' data-commentid="49514" data-postid="942" data-belowelement="div-comment-49514" data-respondelement="respond" data-replyto="Répondre à james" aria-label='Répondre à james'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-49555">
+				<div id="div-comment-49555" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/aea759d75af31504a81223f7c667852e?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/aea759d75af31504a81223f7c667852e?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Gil</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49555">1 novembre 2016 à 14 h 07 min</a>		</div>
+
+		<p>Bonjour,</p>
+<p>J&rsquo;utilise Asterisk et Ekiga (mais aussi jitsi) sur une distribution Mageia. Le softphone est bien  installé, je peux recevoir des appels de l&rsquo;extérieur. Si j&rsquo;ai installé ce PABX, c&rsquo;est que je désire un standard avec pré décroché. Le problème que je rencontre est à ce niveau:ça sonne bien, mais aucune musique d&rsquo;accueil et d&rsquo;attente.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49555#respond' data-commentid="49555" data-postid="942" data-belowelement="div-comment-49555" data-respondelement="respond" data-replyto="Répondre à Gil" aria-label='Répondre à Gil'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-49558">
+				<div id="div-comment-49558" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49558">7 novembre 2016 à 0 h 32 min</a>		</div>
+
+		<p>Bonjour,<br />
+Pouvez vous me montrer vos fichiers de configuration ?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49558#respond' data-commentid="49558" data-postid="942" data-belowelement="div-comment-49558" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-49616">
+				<div id="div-comment-49616" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/435e64bf354211af0f003cab2d9fe789?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/435e64bf354211af0f003cab2d9fe789?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Patric</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49616">28 février 2017 à 18 h 42 min</a>		</div>
+
+		<p>Bonjour,<br />
+votre article est très intéressant. Mais comment fait-on pour appeler un numéro en dehors de son réseau local, par exemple son smartphone sur la 3G ou 4G à partir d&rsquo;asterisk (qui est relié au réseau local de la maison)? </p>
+<p>J&rsquo;arrive à appeler le numéro 22 à partir du numéro 21 sur mon réseau local wifi. Je voudrais appeler mon numéro ORANGE 06xxxxxxxx. Comment configure t-on astérisk?</p>
+<p>D&rsquo;avance merci.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49616#respond' data-commentid="49616" data-postid="942" data-belowelement="div-comment-49616" data-respondelement="respond" data-replyto="Répondre à Patric" aria-label='Répondre à Patric'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-49620">
+				<div id="div-comment-49620" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49620">1 mars 2017 à 22 h 27 min</a>		</div>
+
+		<p>Bonjour,<br />
+Il vous faut souscrire à un trunk SIP vers un opérateur de téléphonie.<br />
+Je vous revoie à l&rsquo;article qui traite du sujet<br />
+<a href="https://www.networklab.fr/liaison-itsp/" rel="ugc">https://www.networklab.fr/liaison-itsp/</a></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49620#respond' data-commentid="49620" data-postid="942" data-belowelement="div-comment-49620" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-49836">
+				<div id="div-comment-49836" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/7c59e707dbaf6f56f91dbeb9f7b950c0?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7c59e707dbaf6f56f91dbeb9f7b950c0?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">xanto</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49836">28 mai 2018 à 4 h 26 min</a>		</div>
+
+		<p>Bonjour Valentin Weber,</p>
+<p>j&rsquo;ai configuré un appel entrant (inbound), SIP show registry est ok sur mon fournisseur SIP, mais je ne reçois pas d&rsquo;appel venant l’extérieur (+33), voici mon config Dial plan :</p>
+<p>exten =&gt; _X.,1,AGI(agi://127.0.0.1:4577/call_log)<br />
+exten =&gt; _X.,2,Dial(SIP/${EXTEN:0}@entrant,,tTo)<br />
+exten =&gt; _X.,3,Hangup</p>
+<p>Pouvez-vous nous aider SVP ?<br />
+Merci</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49836#respond' data-commentid="49836" data-postid="942" data-belowelement="div-comment-49836" data-respondelement="respond" data-replyto="Répondre à xanto" aria-label='Répondre à xanto'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-49838">
+				<div id="div-comment-49838" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49838">30 mai 2018 à 22 h 15 min</a>		</div>
+
+		<p>Bonjour,<br />
+Juste avec un morceau de configuration, je peux difficilement vous aider.<br />
+Le mieux et de commencer par voir les logs d&rsquo;Asterisk avec un mode verbeux élevé.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49838#respond' data-commentid="49838" data-postid="942" data-belowelement="div-comment-49838" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-49902">
+				<div id="div-comment-49902" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/694872699d1ea5582887f16a4561d64e?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/694872699d1ea5582887f16a4561d64e?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">ndiaye</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49902">12 décembre 2018 à 19 h 07 min</a>		</div>
+
+		<p>Bonjour,<br />
+Est ce que je peux avoir un lien sur l&rsquo;interception d&rsquo;appel</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49902#respond' data-commentid="49902" data-postid="942" data-belowelement="div-comment-49902" data-respondelement="respond" data-replyto="Répondre à ndiaye" aria-label='Répondre à ndiaye'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-49910">
+				<div id="div-comment-49910" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49910">16 décembre 2018 à 22 h 05 min</a>		</div>
+
+		<p>Bonjour,<br />
+Je n&rsquo;ai pas de lien à vous proposer.<br />
+A voir ce que vous pouvez trouver sur internet.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49910#respond' data-commentid="49910" data-postid="942" data-belowelement="div-comment-49910" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-49960">
+				<div id="div-comment-49960" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/73a700c870e7e73c88d5ae1be6852630?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/73a700c870e7e73c88d5ae1be6852630?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.exsit.be" class="url" rel="ugc external nofollow">ExsIT</a></cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49960">4 avril 2019 à 12 h 54 min</a>		</div>
+
+		<p>Lors de la réception d&rsquo;un appel extérieur, je fais d&rsquo;abord un appel sur tous les appareils du bureau pendant 10s.<br />
+Ensuite, j&rsquo;ajoute à la liste les n° de mes appareils mobiles.<br />
+Cela marche très bien sauf que c&rsquo;est mon numéro qui s&rsquo;affiche sur le mobile, je ne sais donc pas savoir qui appelle réellement.<br />
+Est-ce possible de corriger ce comportement ?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49960#respond' data-commentid="49960" data-postid="942" data-belowelement="div-comment-49960" data-respondelement="respond" data-replyto="Répondre à ExsIT" aria-label='Répondre à ExsIT'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-49963">
+				<div id="div-comment-49963" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-49963">14 avril 2019 à 21 h 17 min</a>		</div>
+
+		<p>Bonjour,<br />
+Malheureusement, je pense que ce n&rsquo;est pas possible.<br />
+Car ce sera Asterisk qui lancera l&rsquo;appel vers l&rsquo;extérieur.<br />
+Mais il faudrait creuser, il y a peut être une option.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=49963#respond' data-commentid="49963" data-postid="942" data-belowelement="div-comment-49963" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-50017">
+				<div id="div-comment-50017" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/661b817503a81ff77648660cbb6929bc?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/661b817503a81ff77648660cbb6929bc?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Cabrel mbe</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50017">1 août 2019 à 13 h 04 min</a>		</div>
+
+		<p>Bonsoir<br />
+   J&rsquo;aimerai savoir s&rsquo;il est possible d&rsquo;avoir une certification en Voip (serveur asterisk)?<br />
+      Car j&rsquo;aimerai approfondir mes connaissances dans ce domaine.</p>
+<p>         Cordialement</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50017#respond' data-commentid="50017" data-postid="942" data-belowelement="div-comment-50017" data-respondelement="respond" data-replyto="Répondre à Cabrel mbe" aria-label='Répondre à Cabrel mbe'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-50018">
+				<div id="div-comment-50018" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50018">7 août 2019 à 21 h 38 min</a>		</div>
+
+		<p>Bonjour,<br />
+Il y a des certifications Asterisk disponibles sur le site <a href="https://www.asterisk.org/products/training" rel="nofollow ugc">https://www.asterisk.org/products/training</a><br />
+Sinon, les certifications Cisco sont une référence (sur les solutions Cisco).<br />
+Notamment le CCNA Voice. J&rsquo;ai d&rsquo;ailleurs réalisé une série d&rsquo;articles sur la CCNA Voice : <a href="https://www.networklab.fr/category/ccna_voice/" rel="ugc">https://www.networklab.fr/category/ccna_voice/</a></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50018#respond' data-commentid="50018" data-postid="942" data-belowelement="div-comment-50018" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-50023">
+				<div id="div-comment-50023" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/b78f823151bd74b7590d4b6a991627b6?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b78f823151bd74b7590d4b6a991627b6?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">yoane kalala</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50023">9 septembre 2019 à 22 h 35 min</a>		</div>
+
+		<p>bjr monsieur valentin comment creer un context qui pourra relier le reseau ip au gsm? VOOTRE AIDE SVP</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50023#respond' data-commentid="50023" data-postid="942" data-belowelement="div-comment-50023" data-respondelement="respond" data-replyto="Répondre à yoane kalala" aria-label='Répondre à yoane kalala'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-50024">
+				<div id="div-comment-50024" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50024">16 septembre 2019 à 22 h 47 min</a>		</div>
+
+		<p>Bonjour,<br />
+Vous pouvez regarder l&rsquo;article <a href="https://www.networklab.fr/liaison-itsp/" rel="ugc">https://www.networklab.fr/liaison-itsp/</a><br />
+Vous y trouverez des éléments de réponse.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50024#respond' data-commentid="50024" data-postid="942" data-belowelement="div-comment-50024" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-50154">
+				<div id="div-comment-50154" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/19e3332e591a13e6605d06dd7979f2b8?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/19e3332e591a13e6605d06dd7979f2b8?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Erick</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50154">14 avril 2021 à 3 h 14 min</a>		</div>
+
+		<p>Bonjour,<br />
+Comment espacer deux appels de 1mn? c&rsquo;est-à-dire lorsqu&rsquo;un appel se termine il faudra patienter 1mn avant qu&rsquo;un autre appel puisse passer.<br />
+Merci</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50154#respond' data-commentid="50154" data-postid="942" data-belowelement="div-comment-50154" data-respondelement="respond" data-replyto="Répondre à Erick" aria-label='Répondre à Erick'>Répondre</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-vweber bypostauthor odd alt depth-2" id="comment-50157">
+				<div id="div-comment-50157" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/345cae6522e0526fdf1b7f85d9fc3b5f?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>			<cite class="fn">Valentin Weber</cite> <span class="says">dit :</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://www.networklab.fr/configuration-basique-dasterisk/#comment-50157">22 avril 2021 à 20 h 41 min</a>		</div>
+
+		<p>Bonjour,<br />
+Si vous parlez des appels entrant, c&rsquo;est possible dans la gestion des queues. Voir l&rsquo;article : <a href="https://www.networklab.fr/queues/" rel="ugc">https://www.networklab.fr/queues/</a><br />
+Notamment l&rsquo;option Wrapuptime<br />
+Si c&rsquo;est pour limiter les appels sortants, je ne sais pas si c&rsquo;est possible.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://www.networklab.fr/configuration-basique-dasterisk/?replytocom=50157#respond' data-commentid="50157" data-postid="942" data-belowelement="div-comment-50157" data-respondelement="respond" data-replyto="Répondre à Valentin Weber" aria-label='Répondre à Valentin Weber'>Répondre</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+
+	
+
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="/configuration-basique-dasterisk/#respond" style="display:none;">Annuler la réponse</a></small></h3><form action="https://www.networklab.fr/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Votre adresse e-mail ne sera pas publiée.</span> <span class="required-field-message">Les champs obligatoires sont indiqués avec <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Commentaire <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nom</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" /></p>
+<p class="comment-form-email"><label for="email">Courriel</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30" /></p>
+<p class="comment-form-url"><label for="url">Site Web</label><input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.</label></p>
+<p class="cptch_block"><script class="cptch_to_remove">
+				(function( timeout ) {
+					setTimeout(
+						function() {
+							var notice = document.getElementById("cptch_time_limit_notice_35");
+							if ( notice )
+								notice.style.display = "block";
+						},
+						timeout
+					);
+				})(120000);
+			</script>
+			<span id="cptch_time_limit_notice_35" class="cptch_time_limit_notice cptch_to_remove">Le temps imparti est dépassé. Merci de saisir de nouveau le CAPTCHA.</span><span class="cptch_wrap cptch_math_actions">
+				<label class="cptch_label" for="cptch_input_35"><span class="cptch_span"><input id="cptch_input_35" class="cptch_input cptch_wp_comments" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;" /></span>
+					<span class="cptch_span">&nbsp;&minus;&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data:image/png;base64,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" alt="image"/></span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data:image/png;base64,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" alt="image"/></span>
+					<input type="hidden" name="cptch_result" value="J0k=" /><input type="hidden" name="cptch_time" value="1705396648" />
+					<input type="hidden" name="cptch_form" value="wp_comments" />
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						<style type="text/css">
+							.hide-if-no-js {
+								display: none !important;
+							}
+						</style>
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Prévenez-moi de tous les nouveaux commentaires par e-mail.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Prévenez-moi de tous les nouveaux articles par e-mail.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Laisser un commentaire" /> <input type='hidden' name='comment_post_ID' value='942' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d4bdbca8dc" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="110"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	
+
+			
+		
+</div><!-- end of #content -->
+
+</div><!-- end of #wrapper -->
+</div><!-- end of #container -->
+
+<div id="footer" class="clearfix">
+	
+	<div id="footer-wrapper">
+
+		<div class="grid col-940">
+
+			<div class="grid col-540">
+							</div>
+			<!-- end of col-540 -->
+
+			<div class="grid col-380 fit">
+				<ul class="social-icons"></ul><!-- end of .social-icons -->			</div>
+			<!-- end of col-380 fit -->
+
+		</div>
+		<!-- end of col-940 -->
+		
+		<div class="grid col-300 copyright">
+			&copy; 2024<a href="https://www.networklab.fr/" title="Networklab">
+				Networklab			</a>
+		</div>
+		<!-- end of .copyright -->
+
+		<div class="grid col-300 scroll-top"><a href="#scroll-top" title="retour en haut">&uarr;</a></div>
+
+	</div>
+	<!-- end #footer-wrapper -->
+
+	</div><!-- end #footer -->
+
+	<div style="display:none">
+			<div class="grofile-hash-map-6de6684c7eef2743ae479dd80e18ef64">
+		</div>
+		<div class="grofile-hash-map-07844bf030f67ef0994415abd4c5f000">
+		</div>
+		<div class="grofile-hash-map-345cae6522e0526fdf1b7f85d9fc3b5f">
+		</div>
+		<div class="grofile-hash-map-dcc3c2a5237b6b2ce771c0a35b5a5f33">
+		</div>
+		<div class="grofile-hash-map-f5c72fa00d8ad39ecae8802d91c042fc">
+		</div>
+		<div class="grofile-hash-map-81b7e23fd1a18097c742f76ece134216">
+		</div>
+		<div class="grofile-hash-map-e87889da3afb6bf6513e91e0de543030">
+		</div>
+		<div class="grofile-hash-map-3c8a3deffd30b1e18f36c7a6dfab10ff">
+		</div>
+		<div class="grofile-hash-map-60f157aa6c5e0d104f3a2cd808e22aea">
+		</div>
+		<div class="grofile-hash-map-aea759d75af31504a81223f7c667852e">
+		</div>
+		<div class="grofile-hash-map-435e64bf354211af0f003cab2d9fe789">
+		</div>
+		<div class="grofile-hash-map-7c59e707dbaf6f56f91dbeb9f7b950c0">
+		</div>
+		<div class="grofile-hash-map-694872699d1ea5582887f16a4561d64e">
+		</div>
+		<div class="grofile-hash-map-73a700c870e7e73c88d5ae1be6852630">
+		</div>
+		<div class="grofile-hash-map-661b817503a81ff77648660cbb6929bc">
+		</div>
+		<div class="grofile-hash-map-b78f823151bd74b7590d4b6a991627b6">
+		</div>
+		<div class="grofile-hash-map-19e3332e591a13e6605d06dd7979f2b8">
+		</div>
+		</div>
+		<script type="text/javascript" src="https://secure.gravatar.com/js/gprofiles.js?ver=202403" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-content/plugins/jetpack/modules/wpgroho.js?ver=12.8.1" id="wpgroho-js"></script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-content/themes/responsive/core/js/responsive-scripts.js?ver=1.2.4" id="responsive-scripts-js"></script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-includes/js/comment-reply.min.js?ver=6.4.2" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-content/plugins/jetpack/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js?ver=20180522" id="eu-cookie-law-script-js"></script>
+<script defer type="text/javascript" src="https://stats.wp.com/e-202403.js" id="jetpack-stats-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'65682218',post:'942',tz:'1',srv:'www.networklab.fr',j:'1:12.8.1'} ]);
+_stq.push([ "clickTrackerInit", "65682218", "942" ]);
+/* ]]> */
+</script>
+<script defer type="text/javascript" src="https://www.networklab.fr/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1700771266" id="akismet-frontend-js"></script>
+<script type="text/javascript" id="cptch_front_end_script-js-extra">
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"1b1d416d7f","ajaxurl":"https:\/\/www.networklab.fr\/wp-admin\/admin-ajax.php","enlarge":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.networklab.fr/wp-content/plugins/captcha/js/front_end_script.js?ver=6.4.2" id="cptch_front_end_script-js"></script>
+</body>
+</html>
